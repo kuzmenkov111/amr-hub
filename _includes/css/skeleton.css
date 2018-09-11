@@ -1,0 +1,150 @@
+/* -----------------------------------*/
+/* ----- 960px wide fancy grid! ----- */
+/* -----------------------------------*/
+
+/* by tim o'brien, t413.com
+ * based on getskeleton.com
+ */
+
+
+/* ----- base grid----- */
+
+.container               { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+.container .column       { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+.row                     { margin-bottom: 20px; }
+
+.container .small.column { width: 300px; }
+.container .half.column  { width: 460px; }
+.container .big.column   { width: 620px; }
+.container .full.column  { width: 940px; }
+
+
+/* ----- Tablet (Portrait) -- 768px ----- */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    .container               { width: 768px; }
+
+    .container .small.column { width: 236px; }
+    .container .half.column  { width: 364px; }
+    .container .big.column   { width: 488px; }
+    .container .full.column  { width: 748px; }
+  }
+
+
+/* ----- Mobile (Portrait) ----- */
+  @media only screen and (max-width: 767px) {
+    .container                { width:  96%; }
+    .container .column        { margin:  1%; }
+
+    .container .small.column { width: 48%; }
+    .container .half.column  { width: 48%; }
+    .container .big.column   { width: 98%; }
+    .container .full.column  { width: 98%; }
+  }
+
+
+/* ----- Mobile (Landscape) -- 480px ----- */
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container                { width:  92%; }
+    .container .column        { margin:  2%; }
+
+    .container .small.column { width: 46%; }
+    .container .half.column  { width: 46%; }
+    .container .big.column   { width: 96%; }
+    .container .full.column  { width: 96%; }
+  }
+
+
+
+/* ----- Clearing ----- */
+
+  /* Self Clearing Goodness */
+  .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+  /* Use clearfix class on parent to clear nested columns,
+  or wrap each row of columns in a <div class="row"> */
+  .clearfix:before,
+  .clearfix:after,
+  .row:before,
+  .row:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0; }
+  .row:after,
+  .clearfix:after {
+    clear: both; }
+  .row,
+  .clearfix {
+    zoom: 1; }
+
+  /* You can also use a <br class="clear" /> to clear columns */
+  .clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }

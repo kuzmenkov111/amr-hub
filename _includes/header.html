@@ -1,0 +1,24 @@
+<nav>
+  {% assign posts=site.posts | where:"lang", page.lang %}
+  <ul>
+    {% for node in posts reversed %} {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
+    <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
+    {% endfor %}
+
+    {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %} 
+    {% for page in pages %} 
+    <li>
+    {% if page.lang == "ru" %}
+      <a href="{{ page.url | prepend: site.baseurl }}">Русский</a>
+    {% endif %}
+    {% if page.lang == "en" %}
+      <a href="{{ page.url | prepend: site.baseurl }}">English</a>
+    {% endif %}
+  </li>
+  {% endfor %}
+    
+  </ul>
+
+
+  
+</nav>
