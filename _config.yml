@@ -20,7 +20,7 @@ index:
 source_link: "https://github.com/t413/SinglePaged"
 
 
-baseurl: "amr-hub" # the subpath of your site, e.g. /blog
+baseurl: "/amr-hub" # the subpath of your site, e.g. /blog
 
 url: "https://iacmac-web-tools.github.io" # the base hostname & protocol for your site
 favicon:     "img/favicon.ico"
