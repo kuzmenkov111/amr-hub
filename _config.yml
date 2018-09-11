@@ -17,8 +17,6 @@ index:
   en: index_en.html
   ru: 
 
-permalink: /:title ## disables post output
-
 source_link: "https://github.com/t413/SinglePaged"
 
 
