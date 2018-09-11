@@ -16,8 +16,14 @@ description:
 index:
   en: index_en.html
   ru: 
+
+permalink: /:title ## disables post output
+
 source_link: "https://github.com/t413/SinglePaged"
-baseurl: "./" # the subpath of your site, e.g. /blog
+
+
+baseurl: "/amr-hub" # the subpath of your site, e.g. /blog
+
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 favicon:     "img/favicon.ico"
 touch_icon:  "img/apple-touch-icon.png"
